@@ -7,6 +7,10 @@ if prog == "1":
     import factors
 elif prog == "2":
     import palindrome
+else:
+    print("""
+No valid option selected, exiting.
+""")
 
 
     

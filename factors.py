@@ -4,7 +4,7 @@ done = False
 while not(done):
     try:
         val=int(input("Enter an integer to determine prime factors:"))
-        done = 1
+        done = True
     except ValueError:
         print("error with that value please try again and enter an integer.")
     except:
