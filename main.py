@@ -1,5 +1,5 @@
 prog = input("""
-For Integers enter 1.
+For Prime Factors enter 1.
 For palindrome enter 2.
 """)
 

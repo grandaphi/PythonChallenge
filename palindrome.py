@@ -7,7 +7,7 @@ while not(done):
         value = input("""
 Enter a string
 """)
-        if not re.findall("[a-zA-Z]",value) or re.findall("[0-9]",value):
+        if not re.findall("[a-zA-Z]",value):
             raise ValueError
         else:
             done = True
