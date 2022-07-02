@@ -18,20 +18,11 @@ Enter a string
         raise
 
 stripped = re.findall("[a-zA-Z]",value)
-    
-print(stripped)
+reversed = stripped[::-1]
 
-length=len(stripped)
 
-for i in range(length):
-    if stripped[i]==stripped[(length-1)-i]:
-        palindrome = True
-    else:
-        palindrome = False
+print(reversed==stripped)
 
-if palindrome:
-    print("this is a palindrome")
-else:
-    print("this is not a palindrome")
+
 
 
