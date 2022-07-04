@@ -1,44 +1,37 @@
-#  find indices of matched objects in list, including lists of any depth
-#  must take two arguments; 1. list to search, and 2. value to match
-#  must have one output; 1. list of indices
-indexList = []
-
-testList = ["foo","bar","baz",["foo"]]
+testList = ["foo","bar","baz",["","foo",["foo","bar","baz",["foo"]]],["foo","bar","baz",["foo"]]]
 testValue = "foo"
+# correctoutput = [0,[3,1],[3,2,0],[3,2,3,0],[4,0],[4,3,0]]
+indices = []
+tempInds = []
+temporary = []
 
-def findIndices(List,Value):
+def findInds(List,Value):
     for x in range(len(List)):
         try:
             if List[x] == Value:
-                print(x)
-            if isinstance(List[x],list):
-                findIndices(List[x],Value)
+                if len(tempInds) > 0:
+                    tempInds.append(x)
+                    indices.append(tempInds.copy())
+                    tempInds.pop()
+                    
+                else:
+                    indices.append(x)
+                    
+            elif isinstance(List[x],list):
+                tempInds.append(x)
+                findInds(List[x],Value)
+                
         except ValueError:
             pass
+    try:
+        if len(tempInds) > 0:
+            tempInds.pop()
+            
+    except:
+        pass
 
+findInds(testList,testValue)
+print(indices)
         
-        
-findIndices(testList,testValue)
-
-
-# def findIndices(list,value):
-#     try:
-#         valIndex = list.index(value)
-#         print(valIndex)
-#         indexList.append(valIndex)
-#         valIndex=list[valIndex+1:].index(value)
-#         indexList.append(valIndex+1)
-#         #  call findIndices again but with limited range based on last found index, pass optional index argumnet. default is 0
-#         #  what about other depths in list? find dimensions with recursion?
-        
-#     except:
-#         print('nothing')
-#     return indexList
-
-# print(findIndices(List,Value))
-
-
-
-
-
-
+                    
+                    
