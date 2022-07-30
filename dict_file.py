@@ -9,7 +9,7 @@
 #  outputs: dictionary data
 
 
-def dictFile():
+def dict_file():
     numPairs = int(input("How many key value pairs do you wish to enter?"))
 
     dictionary = dict(
@@ -24,4 +24,8 @@ def dictFile():
     print(f.read())
     
 
-dictFile()
+dict_file()
+
+def open_file():
+    
+    

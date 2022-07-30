@@ -12,13 +12,13 @@ if prog == "1":
 elif prog == "2":
     import palindrome
 elif prog == "3":
-    import sortString
+    import sort_string
 elif prog == "4":
-    import findIndices
+    import find_indices
 elif prog == "5":
-    import waitingGame
+    import waiting_game
 elif prog == "6":
-    import dictFile
+    import dict_file
 else:
     print("""
 No valid option selected, exiting.

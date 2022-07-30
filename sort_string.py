@@ -2,17 +2,17 @@
 #  solution found in W3schools refernce string.split () method and list.sort() method with key=str.lower to ignore case
 #  .join method to return list as string , as per spec in challenge
 
-def SortString():
-    rawString = input("Enter a string to have the words sorted alphabetically:\n\r")
+def sort_string():
+    raw_string = input("Enter a string to have the words sorted alphabetically:\n\r")
 
-    splitList = rawString.split()
+    split_list = raw_string.split()
 
-    splitList.sort(key = str.lower)
+    split_list.sort(key = str.lower)
 
-    jointString = ' '.join(splitList)
+    joint_string = ' '.join(split_list)
 
-    print(jointString)
+    print(joint_string)
 
     return
 
-SortString()
+sort_string()
