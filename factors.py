@@ -13,7 +13,7 @@ while not(done):
 
 print("you have entered: ",val)
 
-is_prime,factors = f.find_factorsactors(val)
+is_prime,factors = f.find_factors(val)
 
 if is_prime == 1:
     print(val,"is a prime number i.e. the only factors are itself and 1.")

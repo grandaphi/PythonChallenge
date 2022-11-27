@@ -12,7 +12,7 @@ tolerance = 0.1
 
 
 def waiting_game():
-    target_time = round(random.random() * 3) + 1
+    target_time = random.randint(1, 4)
     print("Your target time is:", target_time, "s")
     try:
         inp = input("press enter to begin")
@@ -25,7 +25,7 @@ def waiting_game():
         if inp:
             raise Exception("Please only press enter. Try again")
         else:
-            total_time = round((end_time - start_time) / nano)
+            total_time = round((end_time - start_time) / nano, 3)
             time_diff = round(total_time - target_time, 3)
             print("your time is", total_time, "s")
             if abs(time_diff) < tolerance:
