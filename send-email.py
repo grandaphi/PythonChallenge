@@ -3,9 +3,9 @@ import smtplib
 from email.message import EmailMessage
 
 msg = EmailMessage()
-msg.set_content('This is my message')
+msg.set_content(input("Enter email message:\n"))
 
-msg['Subject'] = 'Subject'
+msg['Subject'] = input("Enter subject:\n")
 msg['From'] = os.environ['Username']
 
 msg['To'] = input("enter destination email address:\n")
