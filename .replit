@@ -1,2 +1,2 @@
 language = "python3"
-run = "python words.py"
+run = "python generatePW.py"

@@ -7,8 +7,8 @@ topword=[]
 wordict ={}
 totalWords = 0
 
-
-with open("pg100.txt",'r') as file:
+filestr = input("Enter filename for word analysis")
+with open(filestr,'r') as file:
     lines = [line.split() for line in file]
 
 for i in range(len(lines)):
