@@ -17,9 +17,6 @@ with open('list1.csv', 'r') as csv1, open('list2.csv', 'r') as csv2:
         writer.writerows(readCsv2)
 
 print(subprocess.run(['cat newcsv.csv'], shell = True, capture_output=True))
-        
-        # csvDict.update(line[i for i in range(len(line))])
-
     
 
     
