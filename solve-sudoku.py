@@ -15,7 +15,7 @@ test = [[0, 0, 0, 0, 0, 0, 2, 0, 0],
 poss = [[list(range(1,10)) if test[i][j]==0 else test[i][j] for j in range(9)] for i in range(9)]
 print(poss)
 
-# check rows , columns and 3x3 cells
+# check rows , columns
 
 for i in range(len(test)):
     for j in range(len(test[i])):
@@ -75,8 +75,31 @@ for i in range(len(test)):
                             if isinstance(poss[x][y],list) and test[i][j] in poss[x][y]:
                                 poss[x][y].remove(test[i][j])
                 
-                        
+
+
+
 print("\n\n")
 for i in range(9):
     print(poss[i],"\n")
 
+# find where numbers can only occur in each row
+for i in range(9):
+    count = [0 for _ in range(9)]
+    for j in range(9):
+        if isinstance(poss[i][j],list):
+            for k in range(len(poss[i][j])):
+                count[poss[i][j][k]-1]+=1
+
+    for x in range(9):
+        if isinstance(poss[i][x],list):
+            for y in range(9):
+                if count[y] == 1 and y+1 in poss[i][x]:
+                    poss[i][x]= y+1
+                    print("y=",y+1)
+                    print("bang")
+                
+    
+    print(count)
+    
+for i in range(9):
+    print(poss[i],"\n")
