@@ -3,3 +3,4 @@ __pycache__/*
 .*
 .*/
 !.gitignore
+.cache/replit/__replit_disk_meta.json
