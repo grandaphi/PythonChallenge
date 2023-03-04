@@ -1,4 +1,4 @@
-import findFactors as f
+import find_factors as f
 done = False
 
 while not(done):
@@ -13,9 +13,9 @@ while not(done):
 
 print("you have entered: ",val)
 
-isprime,factors = f.findFactors(val)
+is_prime,factors = f.find_factors(val)
 
-if isprime == 1:
+if is_prime == 1:
     print(val,"is a prime number i.e. the only factors are itself and 1.")
 else:
     print(val,"isn't a prime number. Factors are:",factors)
